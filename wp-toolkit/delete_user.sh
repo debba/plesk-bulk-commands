@@ -46,7 +46,7 @@ do
             echo "Utenti a cui puoi riassegnare i contenuti:"
             plesk ext wp-toolkit --wp-cli -instance-id "$DOMAIN_ID" -- user list
             read -p "Digita l'ID dell'utente: "
-            plesk ext wp-toolkit --wp-cli -instance-id "$DOMAIN_ID" -- user delete "$USERS" --reassign=""$REPLY"
+            plesk ext wp-toolkit --wp-cli -instance-id "$DOMAIN_ID" -- user delete "$USERS" --reassign="$REPLY"
           fi
 
       fi
