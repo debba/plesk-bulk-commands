@@ -2,18 +2,14 @@
 
 if [ -z "$1" ]
   then
-    echo "No argument supplied, use: ./update_password.sh email password"
-    exit
-fi
-
-if [ -z "$2" ]
-  then
-    echo "No argument supplied, use: ./update_password.sh email password"
+    echo "No argument supplied, use: ./update_password.sh email"
     exit
 fi
 
 EMAIL=$1
-PASSWORD=$2
+
+read -p "Digita la nuova password:"
+PASSWORD=$REPLY
 
 for DOMAIN_ID in $DOMAIN_IDS
 do
