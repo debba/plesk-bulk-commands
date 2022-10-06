@@ -7,6 +7,7 @@ if [ -z "$1" ]
 fi
 
 EMAIL=$1
+DOMAIN_IDS=$(plesk ext wp-toolkit list | sed 1d | awk '{print $1}')
 
 read -p "Digita la nuova password:"
 PASSWORD=$REPLY
